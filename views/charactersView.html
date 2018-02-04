@@ -1,0 +1,38 @@
+
+
+<div class="container">
+	<div class="box" style="margin-top: 30px;background: rgba(102, 95, 144, 0.5);">
+		<div class="row">
+				<div class="col-lg-12">
+                <hr/>
+                <h2 class="intro-text text-center" >
+                   	<strong>Characters</strong>
+                </h2>
+                <hr/>  
+            </div>
+		</div>
+		<div class="row">
+        	<div class="col-xs-12 col-sm-6">
+                 <button class="filters btn btn-block" ng-click="sort=!sort">Sort</button>
+            </div>
+             <div class="col-xs-12 col-sm-6">
+                <div class="filters input-group btn-block">
+                 <span class="input-group-addon">Character</span>
+                 <input type="text" class="form-control" ng-model="bookFilter" placeholder="Search By Name"/>
+               </div>
+            </div>
+        </div>
+         <div class="row" style="margin-top: 30px;">
+               		<div class="col-xs-12 text-center" ng-repeat="characters in main.characters |orderBy : sort? '-name': 'name'|filter:bookFilter ">
+                 		  <a style="text-decoration: none;" ng-href="#!/achar/{{characters.url.replace('https://anapioficeandfire.com/api/characters/','') }}"> 
+                          <div class="card  center" style="background-image: url(images/list4.jpg);" ng-hide="characters.name==''">
+                               <div class="card-title" style=" color:#c587d8;" >
+                                  <h1 >{{characters.name}}</h1>
+                                </div>
+                         </div>
+                     </a>
+               		</div>
+               </div> 
+	</div> <!-- END of box -->
+	
+</div>

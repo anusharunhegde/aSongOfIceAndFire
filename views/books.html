@@ -1,0 +1,53 @@
+<div class="container">
+
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-xs-12 col-sm-4">
+                <button class=" buttons btn btn-default btn-block " ng-click="main.allBooks()">Books</button>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <button class=" buttons btn btn-default btn-block " ng-click="main.allHouses()">Houses</button>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+                <button class=" buttons btn btn-default btn-block " ng-click="main.allCharacters()">Characters</button>
+            </div>
+        </div>
+        
+        <div class="books" ng-show="main.displayBooks">
+            <books-view></books-view>
+        </div>
+        <div class="houses" ng-show="main.displayHouses">
+            <houses-view></houses-view>
+        </div>
+        <div class="characters" ng-show="main.displayCharacters">
+            <characters-view></characters-view>
+        </div>
+        
+        
+</div>
+    <!-- /.container -->
+
+    <style type="text/css">
+       
+        .btn-default {
+            color: #3e3b05;
+            background: rgba(185, 147, 16, 0.8);
+            border :none;
+        }
+        .btn{
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+        }
+       
+       .buttons {
+          padding: 12px 0;
+          margin-bottom: 10px;
+          box-shadow: 5px 4px 10px  rgba(0,0,0,0.8);
+          cursor: pointer;
+          text-transform: uppercase;
+
+
+        }
+
+       
+    </style>
